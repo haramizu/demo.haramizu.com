@@ -1,3 +1,4 @@
+// components/Analytics.tsx
 "use client";
 
 import { GTM_ID, pageview } from "@/lib/gtm";

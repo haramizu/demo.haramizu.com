@@ -1,7 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { GTM_ID } from "@/lib/gtm";
 import { Suspense } from "react";
 import Analytics from "@/components/Analytics";
 const inter = Inter({ subsets: ["latin"] });
@@ -18,7 +17,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <meta id={GTM_ID} />
       <body>
         <Suspense>
           <Analytics />
