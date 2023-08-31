@@ -1,9 +1,21 @@
-export const GTM_ID: string | undefined = process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID;
+// lib/gtm.ts
+type WindowWithDataLayer = Window & {
+  dataLayer: Record<string, any>[];
+};
 
-export const pageview = (url: string): void => {
-  if (window.dataLayer) {
+declare const window: WindowWithDataLayer;
+
+export const GTM_ID = process.env.NEXT_PUBLIC_GTM;
+
+export const pageview = (url: string) => {
+  if (typeof window.dataLayer !== "undefined") {
     window.dataLayer.push({
-      event: 'pageview',
+      event: "pageview",
+      page: url,
+    });
+  } else {
+    console.log({
+      event: "pageview",
       page: url,
     });
   }
