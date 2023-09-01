@@ -1,0 +1,38 @@
+﻿id: blog
+name:
+  en-US: Blog
+description:
+  en-US: ''
+fields:
+- id: title
+  name:
+    en-US: Title
+  type: ShortText
+  required: true
+  helpText:
+    en-US: Blog title
+  reference: 
+- id: description
+  name:
+    en-US: Description
+  type: ShortText
+  required: true
+  helpText:
+    en-US: Blog description
+  reference: 
+- id: publishDate
+  name:
+    en-US: Publish Date
+  type: DateTime
+  required: true
+  helpText:
+    en-US: Publish date
+  reference: 
+- id: blogImage
+  name:
+    en-US: Blog Image
+  type: Media
+  required: false
+  helpText:
+    en-US: ''
+  reference: 

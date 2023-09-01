@@ -1,0 +1,15 @@
+﻿id: zueShIf2qk6CzN5EL-mAIQ
+name: Second post
+fields:
+  title:
+    value: Did you know Headless CMS?
+    type: ShortText
+  description:
+    value: Sitecore Content Hub ONE is pure Headless CMS
+    type: ShortText
+  publishDate:
+    value: 2023-09-14T14:00:00.0000000+09:00
+    type: DateTime
+  blogImage:
+    value: []
+    type: Media
