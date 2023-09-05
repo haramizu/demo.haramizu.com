@@ -5,7 +5,7 @@ export interface Blog {
   name: string;
   title: string;
   description: string;
-  publicationDate: string;
+  publishDate: string;
   blogImage: {
     results: Partial<Media>[];
   };
@@ -25,3 +25,32 @@ export interface AllBlogResponse {
     };
   };
 }
+
+export const AllBlogQuery = `query AllBlog {
+  allBlog {
+    total
+    results {
+      description
+      id
+      name
+      publishDate
+      title
+      blogImage {
+        total
+        results {
+          id
+          name
+          description
+          fileHeight
+          fileId
+          fileName
+          fileSize
+          fileType
+          fileUrl
+          fileWidth
+        }
+      }
+    }
+  }
+}
+`;
