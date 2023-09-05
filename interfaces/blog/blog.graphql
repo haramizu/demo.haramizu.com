@@ -1,0 +1,23 @@
+query Blog {
+  blog(id: "8J0Q3r0-H02ExS1sj27v8A") {
+    id
+    name
+    title
+    description
+    publishDate
+    blogImage {
+      results {
+        description
+        fileHeight
+        fileId
+        fileName
+        fileSize
+        fileType
+        fileUrl
+        fileWidth
+        id
+        name
+      }
+    }
+  }
+}

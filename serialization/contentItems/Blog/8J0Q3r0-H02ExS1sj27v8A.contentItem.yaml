@@ -1,0 +1,18 @@
+﻿id: 8J0Q3r0-H02ExS1sj27v8A
+name: First post
+fields:
+  title:
+    value: Welcome to Content Hub ONE Blog
+    type: ShortText
+  description:
+    value: This blog article provide Sitecore Content Hub ONE introduction.
+    type: ShortText
+  publishDate:
+    value: 2023-09-13T14:00:00.0000000+09:00
+    type: DateTime
+  blogImage:
+    value:
+    - type: Link
+      relatedType: Media
+      id: dfjaYMg7Lk-Gz3HY790J-Q
+    type: Media
