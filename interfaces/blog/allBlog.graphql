@@ -1,0 +1,17 @@
+{
+  allBlog {
+    total
+    results {
+      name
+      id
+      title
+      description
+      blogImage {
+        results {
+          fileUrl
+        }
+      }
+      publishDate
+    }
+  }
+}

@@ -1,0 +1,14 @@
+query Media {
+  media(id: "xWBppBJex0Sw140oshAPaw") {
+    id
+    name
+    description
+    fileHeight
+    fileId
+    fileName
+    fileSize
+    fileType
+    fileUrl
+    fileWidth
+  }
+}
