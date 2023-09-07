@@ -27,7 +27,7 @@ export interface AllBlogResponse {
 }
 
 export const AllBlogQuery = `query AllBlog {
-  allBlog {
+  allBlog (orderBy: [PUBLISHDATE_DESC]) {
     total
     results {
       description
