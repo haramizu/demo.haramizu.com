@@ -20,6 +20,7 @@ export async function getAllBlog() {
       description: post.description,
       name: post.name,
       title: post.title,
+      slug: post.slug,
       publishDate: post.publishDate,
       blogImage: post.blogImage,
     });

@@ -5,6 +5,7 @@ query Blog {
     title
     description
     publishDate
+    slug
     blogImage {
       results {
         description

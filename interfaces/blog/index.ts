@@ -6,6 +6,7 @@ export interface Blog {
   title: string;
   description: string;
   publishDate: string;
+  slug: string;
   blogImage: {
     results: Partial<Media>[];
   };
@@ -63,6 +64,7 @@ export const getBlogByIdQuery = (id: string) => {
         title
         description
         publishDate
+        slug
         blogImage {
           results {
             description
