@@ -9,7 +9,9 @@ export default async function Home() {
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
-            <a href={"/blog/" + post.id}>{post.title}</a>
+            <a href={"/blog/" + post.slug}>
+              {post.title} {post.slug}
+            </a>
           </li>
         ))}
       </ul>

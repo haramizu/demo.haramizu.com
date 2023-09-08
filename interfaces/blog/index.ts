@@ -36,6 +36,7 @@ export const AllBlogQuery = `query AllBlog {
       name
       publishDate
       title
+      slug
       blogImage {
         total
         results {
@@ -56,17 +57,22 @@ export const AllBlogQuery = `query AllBlog {
 }
 `;
 
-export const getBlogByIdQuery = (id: string) => {
-  return `query Blog {
-      blog(id: "${id}") {
+export const getBlogSlugQuery = (slug: string) => {
+  return `query AllBlog {
+    allBlog(where: {slug_eq: "${slug}"}) {
+      total
+      results {
+        description
         id
         name
-        title
-        description
         publishDate
         slug
+        title
         blogImage {
+          total
           results {
+            id
+            name
             description
             fileHeight
             fileId
@@ -75,11 +81,10 @@ export const getBlogByIdQuery = (id: string) => {
             fileType
             fileUrl
             fileWidth
-            id
-            name
           }
         }
       }
     }
+  }
   `;
 };

@@ -3,8 +3,7 @@ import {
   Blog,
   AllBlogResponse,
   AllBlogQuery,
-  BlogResponse,
-  getBlogByIdQuery,
+  getBlogSlugQuery,
 } from "@/interfaces/blog";
 
 export async function getAllBlog() {
@@ -30,9 +29,9 @@ export async function getAllBlog() {
 }
 
 export async function getBlogBySlug(slug: string): Promise<Partial<Blog>> {
-  const blogResponse: BlogResponse = (await fetchGraphQL(
-    getBlogByIdQuery(slug)
-  )) as BlogResponse;
+  const results: AllBlogResponse = (await fetchGraphQL(
+    getBlogSlugQuery(slug)
+  )) as AllBlogResponse;
 
-  return blogResponse.data.blog;
+  return results.data.allBlog.results[0];
 }
