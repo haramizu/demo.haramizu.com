@@ -54,3 +54,30 @@ export const AllBlogQuery = `query AllBlog {
   }
 }
 `;
+
+export const getBlogByIdQuery = (id: string) => {
+  return `query Blog {
+      blog(id: "${id}") {
+        id
+        name
+        title
+        description
+        publishDate
+        blogImage {
+          results {
+            description
+            fileHeight
+            fileId
+            fileName
+            fileSize
+            fileType
+            fileUrl
+            fileWidth
+            id
+            name
+          }
+        }
+      }
+    }
+  `;
+};

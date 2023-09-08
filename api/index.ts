@@ -20,7 +20,7 @@ export async function fetchGraphQL(query: string): Promise<unknown> {
         "X-GQL-Token": apiKey,
       },
       body: JSON.stringify({ query }),
-      next: { revalidate: 10 },
+      next: { revalidate: 60 },
     })
       .then((response: Response) => {
         const jsonResponsePromise = response.json();
