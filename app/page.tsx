@@ -1,4 +1,4 @@
-import getAllBlog from "@/api/queries/getBlog";
+import { getAllBlog } from "@/api/queries/getBlog";
 
 export default async function Home() {
   const posts = await getAllBlog();

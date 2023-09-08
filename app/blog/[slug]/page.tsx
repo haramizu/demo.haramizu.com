@@ -1,6 +1,5 @@
-import getAllBlog, { getBlogBySlug } from "@/api/queries/getBlog";
+import { getAllBlog, getBlogBySlug } from "@/api/queries/getBlog";
 import { notFound } from "next/navigation";
-import { Blog } from "@/interfaces/blog";
 
 export async function generateStaticParams() {
   const posts = await getAllBlog();

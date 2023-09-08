@@ -7,7 +7,7 @@ import {
   getBlogByIdQuery,
 } from "@/interfaces/blog";
 
-export default async function getAllBlog() {
+export async function getAllBlog() {
   const results: AllBlogResponse = (await fetchGraphQL(
     AllBlogQuery
   )) as AllBlogResponse;
@@ -28,10 +28,10 @@ export default async function getAllBlog() {
   return posts;
 }
 
-export const getBlogBySlug = async (slug: string): Promise<Partial<Blog>> => {
+export async function getBlogBySlug(slug: string): Promise<Partial<Blog>> {
   const blogResponse: BlogResponse = (await fetchGraphQL(
     getBlogByIdQuery(slug)
   )) as BlogResponse;
 
   return blogResponse.data.blog;
-};
+}
