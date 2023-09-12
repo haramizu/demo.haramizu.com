@@ -1,4 +1,4 @@
-import { getAllBlog, getBlogBySlug } from "@/api/queries/getBlog";
+import { getAllBlog, getBlogBySlug } from "@/app/_util/queries/getBlog";
 import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {

@@ -1,7 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import Analytics from "@/components/gtm/Analytics";
+import Analytics from "./_components/gtm/Analytics";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,12 +15,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja">
+    <html lang="ja" className="dark">
       <body>
         <Suspense>
           <Analytics />
         </Suspense>
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

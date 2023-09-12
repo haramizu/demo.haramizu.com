@@ -1,4 +1,5 @@
-import { getAllBlog } from "@/api/queries/getBlog";
+import { getAllBlog } from "@/app/_util/queries/getBlog";
+import { Button } from "@nextui-org/button";
 
 export default async function Home() {
   const posts = await getAllBlog();
@@ -15,6 +16,9 @@ export default async function Home() {
           </li>
         ))}
       </ul>
+      <div>
+        <Button>Click me</Button>
+      </div>
     </main>
   );
 }
