@@ -1,6 +1,10 @@
-// lib/gtm.ts
+type PageViewEvent = {
+  event: string;
+  page: string;
+};
+
 type WindowWithDataLayer = Window & {
-  dataLayer: Record<string, any>[];
+  dataLayer: PageViewEvent[];
 };
 
 declare const window: WindowWithDataLayer;

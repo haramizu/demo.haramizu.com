@@ -6,6 +6,7 @@ export interface Blog {
   title: string;
   description: string;
   publishDate: string;
+  slug: string;
   blogImage: {
     results: Partial<Media>[];
   };
@@ -27,7 +28,7 @@ export interface AllBlogResponse {
 }
 
 export const AllBlogQuery = `query AllBlog {
-  allBlog {
+  allBlog (orderBy: [PUBLISHDATE_DESC]) {
     total
     results {
       description
@@ -35,6 +36,7 @@ export const AllBlogQuery = `query AllBlog {
       name
       publishDate
       title
+      slug
       blogImage {
         total
         results {
@@ -54,3 +56,35 @@ export const AllBlogQuery = `query AllBlog {
   }
 }
 `;
+
+export const getBlogSlugQuery = (slug: string) => {
+  return `query AllBlog {
+    allBlog(where: {slug_eq: "${slug}"}) {
+      total
+      results {
+        description
+        id
+        name
+        publishDate
+        slug
+        title
+        blogImage {
+          total
+          results {
+            id
+            name
+            description
+            fileHeight
+            fileId
+            fileName
+            fileSize
+            fileType
+            fileUrl
+            fileWidth
+          }
+        }
+      }
+    }
+  }
+  `;
+};
