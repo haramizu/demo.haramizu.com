@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import Analytics from "./_components/gtm/Analytics";
 import { Providers } from "./providers";
+import Header from "./header";
+import Footer from "./footer";
 
 export const metadata: Metadata = {
   title: "Haramizu Demo",
@@ -20,7 +22,11 @@ export default function RootLayout({
         <Suspense>
           <Analytics />
         </Suspense>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
