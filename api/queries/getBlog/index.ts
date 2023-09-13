@@ -1,4 +1,4 @@
-import { fetchGraphQL } from "@/app/_util";
+import { fetchGraphQL } from "@/api";
 import {
   Blog,
   AllBlogResponse,
