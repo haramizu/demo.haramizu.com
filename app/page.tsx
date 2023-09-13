@@ -1,4 +1,4 @@
-import { getAllBlog } from "@/app/_util/queries/getBlog";
+import { getAllBlog } from "@/api/queries/getBlog";
 import { Button } from "@nextui-org/button";
 
 export default async function Home() {
