@@ -28,9 +28,6 @@ export default function Header() {
           <a href="#" className="text-m font-semibold leading-6">
             Marketplace
           </a>
-          <a href="#" className="text-m font-semibold leading-6">
-            Company
-          </a>
         </div>
         <div className="flex lg:flex-1 lg:justify-end">
           <ThemeSwitcher />
