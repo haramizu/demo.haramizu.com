@@ -1,4 +1,4 @@
-// app/_components/button/ThemeSwitcher.tsx
+// components/Button/ThemeSwitcher.tsx
 "use client";
 
 import { useTheme } from "next-themes";

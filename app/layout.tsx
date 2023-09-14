@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import Analytics from "../components/gtm/Analytics";
+import Analytics from "@/components/Analytics/Analytics";
 import { Providers } from "./providers";
 import Header from "./header";
 import Footer from "./footer";

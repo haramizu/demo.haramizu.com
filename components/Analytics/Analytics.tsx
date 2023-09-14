@@ -1,4 +1,4 @@
-// app/_components/gtm/Analytics.tsx
+// components/Analytics/Analytics.tsx
 "use client";
 
 import { GTM_ID, pageview } from "@/utilities/gtm";
