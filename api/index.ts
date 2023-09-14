@@ -1,3 +1,5 @@
+import { REVALIDATE_INTERVAL } from "@/constants/build";
+
 type GraphQLResponseWithErrors = {
   errors: unknown[];
 };
@@ -20,7 +22,7 @@ export async function fetchGraphQL(query: string): Promise<unknown> {
         "X-GQL-Token": apiKey,
       },
       body: JSON.stringify({ query }),
-      next: { revalidate: 60 },
+      next: { revalidate: REVALIDATE_INTERVAL },
     })
       .then((response: Response) => {
         const jsonResponsePromise = response.json();
