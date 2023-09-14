@@ -3,7 +3,7 @@ import { nextui } from "@nextui-org/react";
 
 /** @type {import('tailwindcss').Config} */
 
-const config = {
+const Config = {
   content: [
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -16,4 +16,4 @@ const config = {
   plugins: [nextui()],
 };
 
-export default config;
+export default Config;
