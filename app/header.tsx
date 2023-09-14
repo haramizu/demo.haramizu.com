@@ -1,7 +1,7 @@
 // app/header.tsx
 
 import Image from "next/image";
-import ThemeSwitcher from "../components/test/ThemeSwitcher";
+import ThemeSwitcher from "@/components/Button/ThemeSwitcher";
 import Link from "next/link";
 
 export default function Header() {
